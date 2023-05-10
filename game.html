@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>BTS Website</title>
+		<script>
+			function getRandomNumber(minNumber, maxNumber) {
+				let something = 0
+				return Math.floor( Math.random() * (maxNumber - minNumber + 1) + minNumber)
+			}
+
+			// our game definitions
+			let rock = 1
+			let paper = 2
+			let scissors = 3
+
+			// selections
+			let player = prompt("Chose: 1 for 🪨, 2 for 📃, 3 for ✂️")
+			const MIN = 1
+			const MAX = 3
+			
+			let computer = getRandomNumber(MIN, MAX)
+
+			if (player == 1) {
+				alert("You chose rock")
+			} else if (player == 2) {
+				alert("You chose paper")
+			} else if (player == 3) {
+				alert("You chose scissors")
+			} else {
+				alert("you lose")
+			}
+
+			alert("Computer chose " + computer)
+
+			// let's fight
+			if (player == computer) {
+				alert("It's a tie")
+
+			// 									🪨 								✂️
+			} else if (player == 1 && computer == 3) {
+				alert("You win")
+
+			// 									📃								🪨
+			} else if (player == 2 && computer == 1) {
+				alert("You win")
+
+			// 									✂️								📃
+			} else if (player == 3 && computer == 2) {
+				alert("You win")
+
+			} else {
+				alert("You lose")
+			}
+
+		</script>
+	</head>
+	<body>
+		<h1>We go back in 15min</h1>
+		<p>If you have doubts, please add to the chat</p>
+	</body>
+</html>
