@@ -1,0 +1,11 @@
+<script>
+    const amount = Number(prompt("Amount to invest?"));
+    const percentage = Number(prompt("Annual percentage interest?") / 100);
+    const years = Number(prompt("Years?"));
+
+    let sum = amount;
+    for(let i = 1; i <= years; i++) {
+        sum = sum + (sum * percentage);
+        alert("Capital after " + i + " year: " + sum + "€");
+    }
+</script>
